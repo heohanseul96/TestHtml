@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="kr">
+<head>
+ 	<meta charset="utf-8">
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>세종대학교 대나무숲</title>
+ 	<script src="js/jquery-1.10.2.js"></script>
+ 	<script src="js/jquery-ui.js"></script>
+
+ 	<style>
+
+ 	body{
+   		z-index: 0;
+   		background: #000;
+   		margin: 0px 0px;
+   		color: #FFFFFF;
+   		line-height: 2;
+   		background-image: url('images/bg.jpg');
+   		background-repeat: no-repeat;
+   		background-attachment: fixed;
+   		background-size: 100% 100%;
+ 	}
+ 
+	.second-bg{
+   		top: 0px;
+   		left: 0px;
+   		z-index: -1;
+   		width: 100%;
+   		height: 100%;
+   		position:absolute;
+   		opacity: 0.5;
+   		background-color: black;
+ 	}
+
+	header {
+ 		display: block;
+ 		width:100%;
+ 		min-width: 1400px;
+ 		position:relative; 
+ 		z-index:5;
+ 		height: 125px;
+	}
+
+	header .header-main{
+ 		float: right; 
+ 		width: 80%;
+ 		min-width: 900px;
+ 		height: 100%;
+ 		margin-left: 0px;
+ 		margin-right: 160px;
+ 		padding-right: 65px;
+	}
+
+	header .header-bg{
+ 		z-index: -1;
+ 		opacity: 0.3;
+ 		background-color: #cbcbcb;
+ 		width: 100%;
+ 		height: 100%;
+ 		position: absolute;
+	}
+
+	header #lgn_button{
+ 		width: 24px;
+ 		height: 24px;
+ 	}    
+	
+	div.header-logo{
+  		padding-left : 80px;
+ 		float: left;
+ 		width: 450px;
+ 		height: 125px;
+	}
+
+	#logo{
+ 		width: 160px;
+ 		float: left;
+	}
+
+	#logo_text{
+ 		font-size: 25px;
+ 		font-weight: bold;
+ 		color: white;
+ 		line-height: 110px;
+	}
+
+	nav{
+  		padding-top: 30px;
+  		display: inline-block;
+  		float: right;
+  		right: 0px;
+	}
+
+	nav ul li{
+ 		font-size: 18px;
+ 		padding: 8px;
+ 		display: inline;
+ 		color: black;
+	}
+
+	nav ul li a{
+ 		text-decoration: none;
+ 		color: black;
+	}
+
+	nav ul li a:hover{
+ 		color: white;
+	}
+
+	nav ul li a#active{
+ 		color: rgb(42,181,186);
+	}
+
+	section{
+  		width: 100%;
+  		position: relative;
+	}
+
+	section article #main-article{;
+  		padding-left: 15%;
+  		padding-right: 15%;
+	}
+
+	footer{
+  		position: absolute;
+  		bottom: 0px;
+  		width: 100%;
+  		min-width: 1400px;
+	}
+
+	footer #like_share{
+  		display: inline-block;
+  		float: right;
+  		margin-right :150px;
+  		margin-top: 20px;
+  		cursor: pointer;
+	}
+
+	footer #copyright{
+  		float: left;
+  		padding-left: 35%;
+  		margin-bottom: 5px;
+  		display: inline-block;
+	}
+
+	footer #ext_link span{
+  		float: right;
+  		display: inline-block;
+  		padding-top: 15px;
+	}
+
+	footer #ext_link span img{
+  		cursor: pointer;
+	}
+ 	
+	footer .third-bg{
+  		z-index: -1;
+  		opacity: 0.3;
+  		background-color: #cbcbcb;
+  		width: 100%;
+  		height: 100%;
+  		position: absolute;
+	}
+
+	#title  {
+		text-align:center;
+  		padding: 0px;
+  		margin: 0px; 
+  		font-size: 30px;
+	}
+
+	#left     {	
+  		padding: 15px;
+  		text-align:center;
+  		width: 45%;  height: 100%;
+  		float: left; 
+  		background-color: rgba( 0, 0, 0, 0.4 );
+	}
+
+	#right {	
+  		padding: 15px;
+  		text-align:center;
+  		width: 45%;  height: 100%;
+  		float: right;
+  		background-color: rgba( 0, 0, 0, 0.4 );
+	}
+
+	</style>
+</head>
+<body>
+  	<div class="second-bg"></div>   
+  	<header>
+    	<div class="header-bg"></div>
+
+    	<div class="header-main">
+    		<a href="main.html"><div class="header-logo">
+      		<img id="logo" src="images/img_logo.png">
+      		<p id="logo_text">세종대학교 대나무숲</p></div>
+    		</a>
+
+     		<nav>
+      	 		<ul>
+        		<li><img id="lgn_button" src="#" onerror="if(lgn_check()){this.src='images/img_exit.png';}else{this.src='images/img_login.png';}" onclick="if(lgn_check()){location.href = 'logout.html';}else{location.href = 'login.html';}" style="cursor: pointer;"></li>
+        		<li><a href="main.html">HOME</a></li>
+        		<li><a href="notice.html">공지사항</a></li>
+        		<li><a href="postpage.html">제보하기</a></li>
+        		<li><a href="#" id="active">이벤트</a></li>
+        		<li><a href="usercenter.html">고객센터</a></li>
+      			</ul>
+    		</nav>
+  	</div>
+	</header>
+
+	<section>
+  	<article>
+    	<div id="main-article">
+      		<div class="eventmain">
+        	<div id="title"><h1> <font color="red">E</font> <font color="orange">V</font> <font color="yellow">E</font> <font color="lightgreen">N</font> <font color="skyblue">T</font> </h1></div>
+        	<div id="left"> · 진행중인 이벤트 · <br><br>
+          	<a href="photo/photo1.html" target="_blank"> <img src="photo/thumbnails/photo1.jpg" width="22%" height="100"></a>
+          	<a href="photo/photo2.html" target="_blank">  <img src="photo/thumbnails/photo2.jpg" width="22%" height="100"></a>
+          	<a href="photo/photo3.html" target="_blank">  <img src="photo/thumbnails/photo3.jpg" width="22%" height="100"></a>
+          	<a href="photo/photo4.html" target="_blank">  <img src="photo/thumbnails/photo4.png" width="22%" height="100"></a>
+          	<a href="photo/photo5.html" target="_blank"> <img src="photo/thumbnails/photo5.jpg" width="30%" height="100"></a>
+          	<a href="photo/photo6.html" target="_blank"> <img src="photo/thumbnails/photo6.jpg"     width="30%" height="100"></a>
+          	<a href="photo/photo7.html" target="_blank"> <img src="photo/thumbnails/photo7.jpg"    width="30%" height="100"></a>
+          	<a href="photo/photo8.html" target="_blank">  <img src="photo/thumbnails/photo8.jpg"     width="45%" height="100"></a>
+          	<a href="photo/photo9.html" target="_blank">  <img src="photo/thumbnails/photo9.jpg"    width="46%" height="100"></a>
+        	</div>
+
+        	<div id="right">· 종료된 이벤트 ·<br><br>
+          	<a href="photo/photo10.html" target="_blank"> <img src="photo/thumbnails/photo10.jpg"   width="45%" height="100"></a>
+          	<a href="photo/photo11.html" target="_blank">  <img src="photo/thumbnails/photo11.jpg"     width="46%" height="100"></a>
+          	<a href="photo/photo12.html" target="_blank">  <img src="photo/thumbnails/photo12.jpg"    width="30%" height="100"></a>
+          	<a href="photo/photo13.html" target="_blank"> <img src="photo/thumbnails/photo13.jpg"   width="30%" height="100"></a>
+          	<a href="photo/photo14.html" target="_blank"> <img src="photo/thumbnails/photo14.jpg"     width="30%" height="100"></a>
+          	<a href="photo/photo15.html" target="_blank">  <img src="photo/thumbnails/photo15.jpg"     width="22%" height="100"></a>
+          	<a href="photo/photo16.html" target="_blank">  <img src="photo/thumbnails/photo16.jpg"    width="22%" height="100"></a>
+          	<a href="photo/photo17.html" target="_blank">  <img src="photo/thumbnails/photo17.jpg"     width="22%" height="100"></a>
+          	<a href="photo/photo18.html" target="_blank"> <img src="photo/thumbnails/photo18.jpg"    width="22%" height="100"></a>
+        	</div>
+      		</div>
+    		</div>
+  	</div>
+	</article>
+	</section>
+
+	<footer>
+ 	<div class="third-bg"></div>
+
+ 	<p id="copyright">Copyright &copy; 임귀당귀, 2016 (웹프로그래밍 005분반 5조)</p>
+ 	<div id="like_share">
+  		<img src="images/btn_like.png" width="49px" height="21px" onClick="alert('우리도,,좋아요,,,하앍♥');")>
+  		<img src="images/btn_share.png" width="43px" height="21px" onClick="alert('페이스북에 공유했습니다!');">
+	</div>
+
+	<div id="ext_link">
+  		<span style="padding: 15px 40px 0px 0px;"><a href="introduce.html"><img src="images/img_managers.png" width="36px" height="36px"></a></span>
+  		<span style="padding: 15px 40px 0px 0px;"><img src="images/img_fb.png" width="36px" height="36px" onClick="window.open('https://www.facebook.com/sejongbamboo/?fref=ts')"></span>
+  		<span style="padding: 15px 15px 0px 0px;"><img src="images/img_sejong.png" width="36px" height="36px" onClick="window.open('http://www.sejong.ac.kr/')"></span>
+  		<span style="padding: 15px 15px 0px 0px;"><img src="images/img_kakao.png" width="36px" height="36px" onClick="window.open('https://open.kakao.com/o/gPBJ5fk')"></span> 
+  		<script>
+  		if(lgn_check()){
+    			document.getElementById("ext_link").innerHTML += '<span style="padding: 15px 15px 0px 0px;"><a href="admin.html"><img src="images/img_admin.png" width="36px" height="36px"></a></span>';
+  		}
+  		</script>
+	</div>
+	</footer>
+</body>
+</html>
